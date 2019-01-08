@@ -1,22 +1,45 @@
 {
-    "repositories":[
+    "name": "wordpress/skeleton",
+    "description": "Composer based WordPress project skeleton.",
+    "keywords": [ "WordPress", "Skeleton", "composer", "wpackagist" ],
+    "homepage": "https://github.com/ttskch/WordPress.Skeleton",
+    "license": "GPL-2.0",
+    "authors": [
         {
-            "type":"composer",
-            "url":"https://wpackagist.org"
+            "name": "Takashi Kanemoto",
+            "email": "kanemoto.takashi@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
         }
     ],
     "require": {
-	"johnpbloch/wordpress": "*",
-	"wpackagist-plugin/akismet":"dev-trunk",
-        "wpackagist-plugin/wordpress-seo":">=7.0.2",
-        "wpackagist-theme/hueman":"*",
-	"wpackagist-plugin/contact-form-7":"5.1.1",
-	"wpackagist-plugin/elementor":"2.4.0-beta2",
-	"wpackagist-theme/mesmerize":"1.6.77",
-	"wpackagist-plugin/mesmerize-companion":"1.6.107",
-	"wpackagist-plugin/woocommerce":"3.5.3",
-	"wpackagist-plugin/woocommerce-services":"1.18.0",
-	"wpackagist-plugin/wordfence":"7.1.20",
-	"wpackagist-plugin/wp-maintenance-mode":"2.2.2"
+        "php": ">=5.3",
+        "johnpbloch/wordpress": "*",
+        "wpackagist-plugin/wp-i18n": "dev-trunk",
+        "wpackagist-plugin/wp-multibyte-patch": "~2.3"
+    },
+    "require-dev": {
+        "composer/composer": "^1.3"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp"
+    },
+    "scripts": {
+        "post-package-install": "Installer::postPackageInstall",
+        "post-package-update": "Installer::postPackageUpdate",
+        "init-wp": "Installer::initWordPress",
+        "post-create-project-cmd": "@php bin/initializer.php"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "scripts/"
+        }
+    },
+    "config": {
+        "secure-http": false
     }
 }
