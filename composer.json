@@ -41,7 +41,16 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "humanmade/s3-uploads": "*",
     "wp-cli/wp-cli" : "~0.22",
-    "psy/psysh" : "~0.6"
+      "psy/psysh" : "~0.6",
+      
+      "wpackagist-plugin/contact-form-7":"5.1.1",
+      "wpackagist-plugin/elementor":"2.4.0-beta2",
+      "wpackagist-theme/mesmerize":"1.6.77",
+      "wpackagist-plugin/mesmerize-companion":"1.6.107",
+      "wpackagist-plugin/woocommerce":"3.5.3",
+      "wpackagist-plugin/woocommerce-services":"1.18.0",
+      "wpackagist-plugin/wordfence":"7.1.20",
+      "wpackagist-plugin/wp-maintenance-mode":"2.2.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
